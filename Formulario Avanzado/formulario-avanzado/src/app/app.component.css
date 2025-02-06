@@ -1,0 +1,31 @@
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;   
+    margin-bottom: 0.5rem; 
+}
+
+form input {
+    border-radius: 1rem;
+    border-color: #dcd8d8;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #ec356d;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+
+}
+
+button[type="submit"] p {
+    margin: 0;
+    color: white;
+    padding: 0.75rem 0;
+}
+
