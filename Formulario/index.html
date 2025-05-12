@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Ingreso de Pacientes Veterinarios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button id="patient-form-tab" class="active">
+                Ingresar Paciente
+            </button>
+            <button id="admin-view-tab">
+                Ver Citas/Registros
+            </button>
+        </div>
+
+          <!-- Patient Intake Form Section -->
+        <div id="patient-form-section" class="content-section active-section">
+            <h1>FORMULARIO DE INGRESO DE PACIENTES VETERINARIOS</h1>            
+            <div class="disclaimer">
+                <p><strong>Aviso:</strong> Gracias por su interés en ser paciente. La información recopilada sobre nuevos pacientes es confidencial y será tratada como tal.</p>
+            </div>            
+            <form id="intake-form">
+                <div class="form-section">
+                    <h2>INFORMACIÓN DEL CLIENTE</h2>
+                    
+                    <div class="form-group">
+                        <label for="client-name">Nombre:</label>
+                        <input type="text" id="client-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="street-address">Dirección:</label>
+                        <input type="text" id="street-address" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">Ciudad:</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="state">Estado/Provincia:</label>
+                            <input type="text" id="state" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="zip-code">Código Postal:</label>
+                            <input type="text" id="zip-code" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Teléfono:</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emergency-contact-name">Contacto de Emergencia:</label>
+                        <input type="text" id="emergency-contact-name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="emergency-contact-relationship">Parentesco:</label>
+                            <input type="text" id="emergency-contact-relationship" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="emergency-contact-phone">Teléfono:</label>
+                            <input type="tel" id="emergency-contact-phone" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h2>INFORMACIÓN DE LA MASCOTA</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pet-name">Nombre de la Mascota:</label>
+                            <input type="text" id="pet-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ownership-duration">¿Cuánto tiempo ha tenido la mascota?:</label>
+                            <input type="text" id="ownership-duration" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="species">Especie:</label>
+                            <input type="text" id="species" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="breed">Raza:</label>
+                            <input type="text" id="breed" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="color">Color:</label>
+                            <input type="text" id="color" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="age">Edad:</label>
+                            <input type="text" id="age" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group radio-group">
+                        <label>Género:</label>
+                        <div class="radio-options">
+                            <label><input type="radio" name="gender" value="Macho"> Macho</label>
+                            <label><input type="radio" name="gender" value="Hembra"> Hembra</label>
+                            <label><input type="radio" name="gender" value="Desconocido"> Desconocido</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group radio-group">
+                        <label>Esterilizado/Castrado:</label>
+                        <div class="radio-options">
+                            <label><input type="radio" name="neutered" value="Sí"> Sí</label>
+                            <label><input type="radio" name="neutered" value="No"> No</label>
+                            <label><input type="radio" name="neutered" value="Desconocido"> Desconocido</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group radio-group">
+                        <label>Exposición al exterior:</label>
+                        <div class="radio-options">
+                            <label><input type="radio" name="outdoor-exposure" value="Solo interior"> Solo interior</label>
+                            <label><input type="radio" name="outdoor-exposure" value="Expuesto al exterior"> Expuesto al exterior</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="travel-history">Describa el historial de viajes de la mascota (últimos 5 años):</label>
+                        <textarea id="travel-history" rows="4"></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" id="submit-btn">Enviar Formulario</button>
+                    <button type="button" id="clear-btn">Limpiar Formulario</button>
+                </div>
+            </form>
+        </div>
+        <!-- Admin View Section -->
+        <div id="admin-view-section" class="content-section">
+            <h1>ADMINISTRACIÓN DE REGISTROS</h1>
+            
+            <div class="admin-controls">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Buscar por nombre...">
+                    <button id="search-btn">Buscar</button>
+                </div>
+                <button id="refresh-btn">Actualizar Lista</button>
+            </div>
+            
+            <div class="records-table-container">
+                <table id="records-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre Mascota</th>
+                            <th>Dueño</th>
+                            <th>Especie</th>
+                            <th>Última Visita</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="records-list">
+                        <!-- Records will be loaded here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Edit Modal (hidden by default) -->
+            <div id="edit-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2>Editar Registro</h2>
+                    <form id="edit-form">
+                        <!-- Edit form fields will be populated here -->
+                    </form>
+                    <div class="modal-actions">
+                        <button id="save-edit-btn">Guardar Cambios</button>
+                        <button id="cancel-edit-btn">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="database.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
